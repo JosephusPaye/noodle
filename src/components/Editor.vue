@@ -1,0 +1,56 @@
+<template>
+  <div
+    class="flex flex-col border-2 border-transparent bg-gray-300"
+    :class="{ 'border-red-300': invalid }"
+  >
+    <textarea
+      autofocus
+      class="w-full flex-grow font-mono p-3 bg-transparent whitespace-pre resize-none outline-none"
+      :placeholder="placeholder"
+      ref="input"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
+    ></textarea>
+    <div class="bg-red-300" v-if="invalid">
+      <div class="py-4 px-5" :key="index" v-for="(error, index) in errors">
+        {{ error }}
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Editor',
+  props: {
+    value: String,
+    errors: Array,
+  },
+  computed: {
+    invalid() {
+      return this.errors.length > 0;
+    },
+    placeholder() {
+      const messages = [
+        'Knock their socks off...',
+        'Knock it out of the park...',
+        'Blow them away...',
+        'Wow them...',
+        'Do, or do not. There is not try...',
+        'Write something amazing...',
+        'Write something awesome...',
+        'You got this...',
+        'You can do it...',
+        'Just do it...',
+        "Don't let your dreams be dreams...",
+      ];
+      return messages[Math.floor(Math.random() * messages.length)];
+    },
+  },
+  methods: {
+    focus() {
+      this.$refs.input && this.$refs.input.focus();
+    },
+  },
+};
+</script>

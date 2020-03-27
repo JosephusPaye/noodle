@@ -1,24 +1,22 @@
-# noodle
+# Noodle
 
-## Project setup
-```
-yarn install
-```
+🍝 Markdown to spaghettified HTML. By spaghettified I mean HTML with all styles embedded inline. Useful for pasting in emails and online text inputs that accept HTML.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+<!-- [![Promotional image of Noodle](./promo.png)](https://noodle.netlify.com/) -->
 
-### Compiles and minifies for production
-```
-yarn build
-```
+This project is part of [#CreateWeekly](https://dev.to/josephuspaye/createweekly-create-something-new-publicly-every-week-in-2020-1nh9), my attempt to create something new publicly every week in 2020.
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Features
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Noodle allows you to:
+
+- Write Markdown with support for code syntax highlighting
+- Compile your Markdown to HTML with inline styles, and the result to clipboard
+
+## Contributing
+
+See [contribution guide](CONTRIBUTING.md).
+
+## Licence
+
+[MIT](LICENCE)
