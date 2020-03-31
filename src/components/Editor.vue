@@ -20,6 +20,20 @@
 </template>
 
 <script>
+import sample from '../sample.md';
+
+function createLoadSample(vm) {
+  return function() {
+    vm.$refs.input.value = sample;
+    vm.$refs.input.dispatchEvent(new Event('input', { bubbles: true }));
+    return 'Enjoy!';
+  };
+}
+
+console.info(
+  '🍜 Noodle:  Run loadSample() to load a sample markdown file in the editor'
+);
+
 export default {
   name: 'Editor',
   props: {
@@ -56,6 +70,7 @@ export default {
     this.$nextTick(() => {
       this.$refs.input.setSelectionRange(0, 0);
     });
+    window.loadSample = createLoadSample(this);
   },
   methods: {
     focus() {
