@@ -20,7 +20,10 @@
         </button>
       </div>
     </div>
-    <div class="bg-white py-8 px-5 md:px-8 noodle-output__preview">
+    <div
+      class="py-8 px-5 md:px-8 noodle-output__preview"
+      :class="[view === 'preview' ? 'bg-white' : 'bg-gray-100']"
+    >
       <div class="max-w-5xl mx-auto">
         <OutputPreview :html="html" v-if="view === 'preview'" />
         <OutputHtml :html="html" v-else />

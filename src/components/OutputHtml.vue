@@ -1,5 +1,5 @@
 <template>
-  <pre v-text="html" class="p-4"></pre>
+  <pre class="text-sm" v-text="html"></pre>
 </template>
 
 <script>
