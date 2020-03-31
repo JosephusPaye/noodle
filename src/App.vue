@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="h-screen grid grid-rows-1 grid-cols-2">
     <Editor v-model="input" :errors="errors" />
-    <Preview :html="html" />
+    <Output :html="html" />
   </div>
 </template>
 
@@ -10,7 +10,8 @@ import debounce from 'debounce';
 
 import { compile } from './compiler';
 import Editor from './components/Editor.vue';
-import Preview from './components/Preview.vue';
+import Output from './components/Output.vue';
+import sample from './sample.md';
 
 const compileDebounced = debounce((input, callback) => {
   try {
@@ -25,11 +26,11 @@ export default {
   name: 'App',
   components: {
     Editor,
-    Preview,
+    Output,
   },
   data() {
     return {
-      input: '',
+      input: sample,
       html: '',
       errors: [],
     };

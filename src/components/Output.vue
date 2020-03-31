@@ -1,6 +1,6 @@
 <template>
-  <div class="h-full overflow-y-auto flex flex-col">
-    <div class="flex py-2 px-4 border-b border-gray-300">
+  <div class="h-full overflow-y-auto flex flex-col bg-gray-800 py-4 px-6">
+    <div class="flex mb-4">
       <button
         class="px-4 py-1"
         :class="[view === 'preview' ? 'bg-blue-600 text-white' : 'bg-gray-300']"
@@ -16,16 +16,23 @@
         HTML
       </button>
     </div>
-    <div class="py-3 px-4 flex-grow overflow-y-auto">
-      <div v-html="html" v-if="view === 'preview'"></div>
-      <pre v-text="html" v-else></pre>
+    <div class="bg-white flex-grow overflow-y-auto">
+      <OutputPreview :html="html" v-if="view === 'preview'" />
+      <OutputHtml :html="html" v-else />
     </div>
   </div>
 </template>
 
 <script>
+import OutputHtml from './OutputHtml.vue';
+import OutputPreview from './OutputPreview.vue';
+
 export default {
-  name: 'Preview',
+  name: 'Output',
+  components: {
+    OutputHtml,
+    OutputPreview,
+  },
   props: {
     html: String,
   },

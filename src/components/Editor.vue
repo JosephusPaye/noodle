@@ -1,11 +1,11 @@
 <template>
   <div
-    class="flex flex-col border-2 border-transparent bg-gray-300"
+    class="flex flex-col border-2 border-transparent bg-white"
     :class="{ 'border-red-300': invalid }"
   >
     <textarea
       autofocus
-      class="w-full flex-grow font-mono p-3 bg-transparent whitespace-pre resize-none outline-none"
+      class="w-full flex-grow font-mono p-3 bg-transparent whitespace-pre-wrap resize-none outline-none"
       :placeholder="placeholder"
       ref="input"
       :value="value"
@@ -43,9 +43,19 @@ export default {
         'You can do it...',
         'Just do it...',
         "Don't let your dreams be dreams...",
+        'Yes you can...',
+        'Just write...',
+        'A journey of a thousand miles begins with only one step...',
+        "If you never try, you'll never know...",
+        "You miss 100% of the shots you don't take...",
       ];
       return messages[Math.floor(Math.random() * messages.length)];
     },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$refs.input.setSelectionRange(0, 0);
+    });
   },
   methods: {
     focus() {
