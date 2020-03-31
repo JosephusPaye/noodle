@@ -4,20 +4,11 @@
       class="bg-gray-300 border-b border-gray-400 relative z-10 py-4 px-5 md:px-8 w-full"
     >
       <div class="flex max-w-5xl mx-auto">
-        <button
-          class="px-4 py-1"
-          :class="[view === 'preview' ? 'bg-blue-600 text-white' : 'bg-white']"
-          @click="view = 'preview'"
-        >
-          Preview
-        </button>
-        <button
-          class="px-4 py-1"
-          :class="[view === 'html' ? 'bg-blue-600 text-white' : 'bg-white']"
-          @click="view = 'html'"
-        >
-          HTML
-        </button>
+        <ToggleButtons>
+          <ToggleButton id="preview" :value.sync="view">Preview</ToggleButton>
+          <ToggleButton id="html" :value.sync="view">HTML</ToggleButton>
+        </ToggleButtons>
+        <CopyButton class="ml-auto" :content="spaghettified" label="Copy" />
       </div>
     </div>
     <div
@@ -39,25 +30,35 @@
 <script>
 import OutputHtml from './OutputHtml.vue';
 import OutputPreview from './OutputPreview.vue';
+import ToggleButtons from './ToggleButtons.vue';
+import ToggleButton from './ToggleButton.vue';
+import CopyButton from './CopyButton.vue';
 
 export default {
   name: 'Output',
+
   components: {
     OutputHtml,
     OutputPreview,
+    ToggleButtons,
+    ToggleButton,
+    CopyButton,
   },
+
   props: {
     html: String,
+    spaghettified: String,
   },
+
   data() {
     return {
       view: 'preview',
-      spaghettified: 'Processing...',
     };
   },
+
   methods: {
     onSpaghettified(spaghettified) {
-      this.spaghettified = spaghettified;
+      this.$emit('update:spaghettified', spaghettified);
     },
   },
 };

@@ -2,7 +2,7 @@
   <div id="app" class="h-screen grid grid-rows-1 grid-cols-2">
     <Editor v-model="input" :errors="errors" />
     <div class="divider"></div>
-    <Output :html="html" />
+    <Output :html="html" :spaghettified.sync="spaghettified" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ import sample from './sample.md';
 
 const compileDebounced = debounce((input, callback) => {
   try {
-    const html = compile(input); // spegattify(markdown.compile(input));
+    const html = compile(input);
     callback({ valid: true, html });
   } catch (err) {
     callback({ valid: false, errors: [err] });
@@ -25,35 +25,42 @@ const compileDebounced = debounce((input, callback) => {
 
 export default {
   name: 'App',
+
   components: {
     Editor,
     Output,
   },
+
   data() {
     return {
       input: sample,
       html: '',
+      spaghettified: '',
       errors: [],
     };
   },
+
   watch: {
     input(input) {
       this.compileMarkdown();
     },
   },
+
   mounted() {
     this.compileMarkdown();
   },
+
   methods: {
     compileMarkdown() {
       compileDebounced(this.input, this.onCompile);
     },
+
     onCompile({ html, valid, errors }) {
       if (valid) {
         this.html = html;
         this.errors = [];
       } else {
-        // console.error(errors);
+        console.error(errors);
         this.errors = errors;
       }
     },
