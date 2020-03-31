@@ -12,7 +12,6 @@ import debounce from 'debounce';
 import { compile } from './compiler';
 import Editor from './components/Editor.vue';
 import Output from './components/Output.vue';
-import sample from './sample.md';
 
 const localStorageInputKey = 'noodle:input';
 

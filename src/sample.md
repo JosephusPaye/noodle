@@ -261,14 +261,32 @@ Inline `code` has `back-ticks around` it.
 
 Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
-<pre lang="no-highlight"><code>```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+<pre lang="no-highlight"><code>```java
+// Java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
 ```
 
-```python
-s = "Python syntax highlighting"
-print s
+```cpp
+// C++
+int main(void) {
+  std::cout << "Hello world!" << std::endl;
+  return 0;
+}
+```
+
+```py
+# Python
+print('Hello world!')
+```
+
+```js
+// JavaScript
+console.log('Hello world!')
+```
 ```
 
 ```
@@ -277,19 +295,60 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 ```
 </code></pre>
 
-```javascript
-var s = 'JavaScript syntax highlighting';
-alert(s);
+```java
+// Java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
 ```
 
-```python
-s = "Python syntax highlighting"
-print s
+```cpp
+// C++
+int main(void) {
+  std::cout << "Hello world!" << std::endl;
+  return 0;
+}
+```
+
+```py
+# Python
+print('Hello world!')
+```
+
+```js
+// JavaScript
+console.log('Hello world!');
 ```
 
 ```
-No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
-But let's throw in a <b>tag</b>.
+No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+```
+
+Some HTML to test embedded languages:
+
+```html
+<!DOCTYPE html>
+<title>Title</title>
+
+<style>
+  body {
+    width: 500px;
+  }
+</style>
+
+<script type="application/javascript">
+  function $init() {
+    return true;
+  }
+</script>
+
+<body>
+  <p checked class="title" id="title">Title</p>
+  <!-- here goes the rest of the page -->
+</body>
 ```
 
 <a name="tables"/>

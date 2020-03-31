@@ -4,6 +4,7 @@
 
 <script>
 import css from '../assets/markdown.rawcss';
+import highlightCss from '../assets/atom-one-light.hljs.rawcss';
 import { spaghettify } from '../compiler';
 
 export default {
@@ -38,10 +39,10 @@ export default {
         return;
       }
 
-      // Naive approach that clears and rerenders everything.
+      // Naive approach that clears and re-renders everything.
       // Find a smarter update strategy if performance becomes a problem.
       this.shadowRoot.innerHTML = `
-        <style>${css}</style>
+        <style>${css + highlightCss}</style>
         <div class="noodle-markdown">${this.html}</div>
       `;
 
