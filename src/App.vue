@@ -14,14 +14,27 @@ import Editor from './components/Editor.vue';
 import Output from './components/Output.vue';
 import sample from './sample.md';
 
-const compileDebounced = debounce((input, callback) => {
+const localStorageInputKey = 'noodle:input';
+
+function getDefaultInput() {
+  const previousInput = localStorage.getItem(localStorageInputKey);
+  return previousInput ? previousInput : '';
+}
+
+const persistInput = debounce(input => {
+  if (input) {
+    localStorage.setItem(localStorageInputKey, input);
+  }
+}, 250);
+
+const compileInput = debounce((input, callback) => {
   try {
     const html = compile(input);
     callback({ valid: true, html });
   } catch (err) {
     callback({ valid: false, errors: [err] });
   }
-}, 300);
+}, 250);
 
 export default {
   name: 'App',
@@ -33,7 +46,7 @@ export default {
 
   data() {
     return {
-      input: sample,
+      input: getDefaultInput(),
       html: '',
       spaghettified: '',
       errors: [],
@@ -43,6 +56,7 @@ export default {
   watch: {
     input(input) {
       this.compileMarkdown();
+      persistInput(input);
     },
   },
 
@@ -52,7 +66,7 @@ export default {
 
   methods: {
     compileMarkdown() {
-      compileDebounced(this.input, this.onCompile);
+      compileInput(this.input, this.onCompile);
     },
 
     onCompile({ html, valid, errors }) {
