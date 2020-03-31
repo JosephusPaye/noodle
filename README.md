@@ -1,6 +1,6 @@
 # Noodle
 
-🍝 Markdown to spaghettified HTML.
+🍜 Markdown to spaghettified HTML.
 
 _Spaghettified HTML?_ Yep - that's HTML with all the styles of each element applied inline.
 

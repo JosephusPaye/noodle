@@ -5,7 +5,7 @@ import App from './App.vue';
 
 Vue.config.productionTip = false;
 
-emojicon.set('🍝');
+emojicon.set('🍜');
 
 new Vue({
   render: h => h(App),
