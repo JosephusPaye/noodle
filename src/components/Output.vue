@@ -25,8 +25,12 @@
       :class="[view === 'preview' ? 'bg-white' : 'bg-gray-100']"
     >
       <div class="max-w-5xl mx-auto">
-        <OutputPreview :html="html" v-if="view === 'preview'" />
-        <OutputHtml :html="html" v-else />
+        <OutputPreview
+          :html="html"
+          v-show="view === 'preview'"
+          @spaghettified="onSpaghettified"
+        />
+        <OutputHtml :html="spaghettified" v-show="view === 'html'" />
       </div>
     </div>
   </div>
@@ -48,7 +52,13 @@ export default {
   data() {
     return {
       view: 'preview',
+      spaghettified: 'Processing...',
     };
+  },
+  methods: {
+    onSpaghettified(spaghettified) {
+      this.spaghettified = spaghettified;
+    },
   },
 };
 </script>

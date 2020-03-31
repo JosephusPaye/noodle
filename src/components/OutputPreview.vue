@@ -1,9 +1,10 @@
 <template>
-  <div></div>
+  <div class="noodle-shadow-root"></div>
 </template>
 
 <script>
 import css from '../assets/markdown.rawcss';
+import { spaghettify } from '../compiler';
 
 export default {
   name: 'OutputPreview',
@@ -33,12 +34,24 @@ export default {
 
   methods: {
     updatePreview() {
+      if (this.html.trim().length === 0) {
+        return;
+      }
+
       // Naive approach that clears and rerenders everything.
       // Find a smarter update strategy if performance becomes a problem.
       this.shadowRoot.innerHTML = `
         <style>${css}</style>
-        <div class="markdown">${this.html}</div>
+        <div class="noodle-markdown">${this.html}</div>
       `;
+
+      const markdown = this.shadowRoot.querySelector('.noodle-markdown');
+
+      if (markdown) {
+        const duplicateTree = markdown.cloneNode(true);
+        spaghettify(duplicateTree, this.shadowRoot.styleSheets);
+        this.$emit('spaghettified', duplicateTree.outerHTML);
+      }
     },
 
     onClick(e) {
@@ -77,3 +90,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.noodle-shadow-root {
+  all: initial;
+}
+</style>

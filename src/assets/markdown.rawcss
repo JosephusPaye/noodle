@@ -1,4 +1,4 @@
-.markdown {
+.noodle-markdown {
   line-height: 1.5;
   color: #24292e;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
@@ -7,95 +7,95 @@
   word-wrap: break-word;
 }
 
-.markdown:after,
-.markdown:before {
+.noodle-markdown:after,
+.noodle-markdown:before {
   display: table;
   content: '';
 }
 
-.markdown:after {
+.noodle-markdown:after {
   clear: both;
 }
 
-.markdown * {
+.noodle-markdown * {
   box-sizing: border-box;
 }
 
-.markdown > :first-child {
+.noodle-markdown > :first-child {
   margin-top: 0 !important;
 }
 
-.markdown > :last-child {
+.noodle-markdown > :last-child {
   margin-bottom: 0 !important;
 }
 
-.markdown blockquote,
-.markdown details,
-.markdown dl,
-.markdown ol,
-.markdown p,
-.markdown pre,
-.markdown table,
-.markdown ul {
+.noodle-markdown blockquote,
+.noodle-markdown details,
+.noodle-markdown dl,
+.noodle-markdown ol,
+.noodle-markdown p,
+.noodle-markdown pre,
+.noodle-markdown table,
+.noodle-markdown ul {
   margin: 0;
   margin-bottom: 16px;
 }
 
-.markdown details {
+.noodle-markdown details {
   display: block;
 }
 
-.markdown summary {
+.noodle-markdown summary {
   display: list-item;
   cursor: pointer;
 }
 
-.markdown a {
+.noodle-markdown a {
   background-color: initial;
   color: #0366d6;
   text-decoration: none;
 }
 
-.markdown a:hover {
+.noodle-markdown a:hover {
   text-decoration: underline;
 }
 
-.markdown a:active,
-.markdown a:hover {
+.noodle-markdown a:active,
+.noodle-markdown a:hover {
   outline-width: 0;
 }
 
-.markdown a:not([href]) {
+.noodle-markdown a:not([href]) {
   color: inherit;
   text-decoration: none;
 }
 
-.markdown img {
+.noodle-markdown img {
   border-style: none;
   max-width: 100%;
   box-sizing: initial;
   background-color: #fff;
 }
 
-.markdown img[align='right'] {
+.noodle-markdown img[align='right'] {
   padding-left: 20px;
 }
 
-.markdown img[align='left'] {
+.noodle-markdown img[align='left'] {
   padding-right: 20px;
 }
 
-.markdown kbd,
-.markdown code,
-.markdown pre {
-  font-family: monospace, monospace;
+.noodle-markdown kbd,
+.noodle-markdown code,
+.noodle-markdown pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 1em;
 }
 
-.markdown kbd {
+.noodle-markdown kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 11px;
   line-height: 10px;
   color: #444d56;
   vertical-align: middle;
@@ -105,18 +105,17 @@
   box-shadow: inset 0 -1px 0 #d1d5da;
 }
 
-.markdown code,
-.markdown pre {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+.noodle-markdown code,
+.noodle-markdown pre {
   font-size: 12px;
 }
 
-.markdown strong,
-.markdown b {
+.noodle-markdown strong,
+.noodle-markdown b {
   font-weight: bold;
 }
 
-.markdown hr {
+.noodle-markdown hr {
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
@@ -124,138 +123,138 @@
   border: 0;
 }
 
-.markdown hr:after,
-.markdown hr:before {
+.noodle-markdown hr:after,
+.noodle-markdown hr:before {
   display: table;
   content: '';
 }
 
-.markdown hr:after {
+.noodle-markdown hr:after {
   clear: both;
 }
 
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
+.noodle-markdown h1,
+.noodle-markdown h2,
+.noodle-markdown h3,
+.noodle-markdown h4,
+.noodle-markdown h5,
+.noodle-markdown h6 {
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
   line-height: 1.25;
 }
 
-.markdown h1,
-.markdown h2 {
+.noodle-markdown h1,
+.noodle-markdown h2 {
   font-weight: 600;
   padding-bottom: 0.3em;
   border-bottom: 1px solid #eaecef;
 }
 
-.markdown h1 {
+.noodle-markdown h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-.markdown h2 {
+.noodle-markdown h2 {
   font-size: 1.5em;
 }
 
-.markdown h3 {
+.noodle-markdown h3 {
   font-size: 1.25em;
 }
 
-.markdown h3,
-.markdown h4 {
+.noodle-markdown h3,
+.noodle-markdown h4 {
   font-weight: 600;
 }
 
-.markdown h4 {
+.noodle-markdown h4 {
   font-size: 1em;
 }
 
-.markdown h5,
-.markdown h6 {
+.noodle-markdown h5,
+.noodle-markdown h6 {
   font-weight: 600;
 }
 
-.markdown h5 {
+.noodle-markdown h5 {
   font-size: 0.875em;
 }
 
-.markdown h6 {
+.noodle-markdown h6 {
   font-size: 0.85em;
   color: #6a737d;
 }
 
-.markdown p {
+.noodle-markdown p {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.markdown blockquote {
+.noodle-markdown blockquote {
   padding: 0 1em;
   color: #6a737d;
   border-left: 0.25em solid #dfe2e5;
 }
 
-.markdown blockquote > :first-child {
+.noodle-markdown blockquote > :first-child {
   margin-top: 0;
 }
 
-.markdown blockquote > :last-child {
+.noodle-markdown blockquote > :last-child {
   margin-bottom: 0;
 }
 
-.markdown ol,
-.markdown ul {
+.noodle-markdown ol,
+.noodle-markdown ul {
   padding-left: 2em;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.markdown ol ol,
-.markdown ul ol {
+.noodle-markdown ol ol,
+.noodle-markdown ul ol {
   list-style-type: lower-roman;
 }
 
-.markdown ol ol,
-.markdown ol ul,
-.markdown ul ol,
-.markdown ul ul {
+.noodle-markdown ol ol,
+.noodle-markdown ol ul,
+.noodle-markdown ul ol,
+.noodle-markdown ul ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.markdown ol ol ol,
-.markdown ol ul ol,
-.markdown ul ol ol,
-.markdown ul ul ol {
+.noodle-markdown ol ol ol,
+.noodle-markdown ol ul ol,
+.noodle-markdown ul ol ol,
+.noodle-markdown ul ul ol {
   list-style-type: lower-alpha;
 }
 
-.markdown li {
-  word-wrap: break-all;
+.noodle-markdown li {
+  word-break: break-all;
 }
 
-.markdown li > p {
+.noodle-markdown li > p {
   margin-top: 16px;
 }
 
-.markdown li + li {
+.noodle-markdown li + li {
   margin-top: 0.25em;
 }
 
-.markdown dl {
+.noodle-markdown dl {
   padding: 0;
 }
 
-.markdown dd {
+.noodle-markdown dd {
   margin-left: 0;
 }
 
-.markdown dl dt {
+.noodle-markdown dl dt {
   padding: 0;
   margin-top: 16px;
   font-size: 1em;
@@ -263,12 +262,12 @@
   font-weight: 600;
 }
 
-.markdown dl dd {
+.noodle-markdown dl dd {
   padding: 0 16px;
   margin-bottom: 16px;
 }
 
-.markdown table {
+.noodle-markdown table {
   display: block;
   width: 100%;
   overflow: auto;
@@ -276,26 +275,26 @@
   border-collapse: collapse;
 }
 
-.markdown table th {
+.noodle-markdown table th {
   font-weight: 600;
 }
 
-.markdown table td,
-.markdown table th {
+.noodle-markdown table td,
+.noodle-markdown table th {
   padding: 6px 13px;
   border: 1px solid #dfe2e5;
 }
 
-.markdown table tr {
+.noodle-markdown table tr {
   background-color: #fff;
   border-top: 1px solid #c6cbd1;
 }
 
-.markdown table tr:nth-child(2n) {
+.noodle-markdown table tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
 
-.markdown code {
+.noodle-markdown code {
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
@@ -303,7 +302,7 @@
   border-radius: 3px;
 }
 
-.markdown pre {
+.noodle-markdown pre {
   word-wrap: normal;
   padding: 16px;
   overflow: auto;
@@ -313,7 +312,7 @@
   border-radius: 3px;
 }
 
-.markdown pre > code {
+.noodle-markdown pre > code {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -323,7 +322,7 @@
   border: 0;
 }
 
-.markdown pre code {
+.noodle-markdown pre code {
   display: inline;
   max-width: auto;
   padding: 0;
