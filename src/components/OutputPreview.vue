@@ -1,5 +1,5 @@
 <template>
-  <div class="output-preview p-8"></div>
+  <div class="output-preview"></div>
 </template>
 
 <script>

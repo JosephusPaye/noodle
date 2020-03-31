@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="h-screen grid grid-rows-1 grid-cols-2">
     <Editor v-model="input" :errors="errors" />
+    <div class="divider"></div>
     <Output :html="html" />
   </div>
 </template>
@@ -60,7 +61,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import './assets/tailwind.css';
 
 body {
@@ -69,7 +70,17 @@ body {
 }
 
 #app {
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4px 1fr;
+
+  @screen lg {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4px 1fr;
+  }
+}
+
+.divider {
+  background-color: #888;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

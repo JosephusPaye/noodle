@@ -5,7 +5,7 @@
   >
     <textarea
       autofocus
-      class="w-full flex-grow font-mono p-3 bg-transparent whitespace-pre-wrap resize-none outline-none"
+      class="w-full flex-grow font-mono px-5 py-3 md:px-8 lg:px-5 bg-transparent whitespace-pre-wrap resize-none outline-none"
       :placeholder="placeholder"
       ref="input"
       :value="value"

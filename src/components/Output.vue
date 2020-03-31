@@ -1,24 +1,30 @@
 <template>
-  <div class="h-full overflow-y-auto flex flex-col bg-gray-800 py-4 px-6">
-    <div class="flex mb-4">
-      <button
-        class="px-4 py-1"
-        :class="[view === 'preview' ? 'bg-blue-600 text-white' : 'bg-gray-300']"
-        @click="view = 'preview'"
-      >
-        Preview
-      </button>
-      <button
-        class="px-4 py-1"
-        :class="[view === 'html' ? 'bg-blue-600 text-white' : 'bg-gray-300']"
-        @click="view = 'html'"
-      >
-        HTML
-      </button>
+  <div class="noodle-output h-full min-h-0">
+    <div
+      class="bg-gray-300 border-b border-gray-400 relative z-10 py-4 px-5 md:px-8 w-full"
+    >
+      <div class="flex max-w-5xl mx-auto">
+        <button
+          class="px-4 py-1"
+          :class="[view === 'preview' ? 'bg-blue-600 text-white' : 'bg-white']"
+          @click="view = 'preview'"
+        >
+          Preview
+        </button>
+        <button
+          class="px-4 py-1"
+          :class="[view === 'html' ? 'bg-blue-600 text-white' : 'bg-white']"
+          @click="view = 'html'"
+        >
+          HTML
+        </button>
+      </div>
     </div>
-    <div class="bg-white flex-grow overflow-y-auto">
-      <OutputPreview :html="html" v-if="view === 'preview'" />
-      <OutputHtml :html="html" v-else />
+    <div class="bg-white py-8 px-5 md:px-8 noodle-output__preview">
+      <div class="max-w-5xl mx-auto">
+        <OutputPreview :html="html" v-if="view === 'preview'" />
+        <OutputHtml :html="html" v-else />
+      </div>
     </div>
   </div>
 </template>
@@ -43,3 +49,16 @@ export default {
   },
 };
 </script>
+
+<style>
+.noodle-output {
+  display: grid;
+  grid-template-rows: 64px 1fr;
+  grid-template-columns: 1fr;
+}
+
+.noodle-output__preview {
+  overflow-y: auto;
+  overflow-y: overlay;
+}
+</style>
