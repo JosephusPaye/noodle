@@ -1,6 +1,10 @@
 # Noodle
 
-🍝 Markdown to spaghettified HTML. By spaghettified I mean HTML with all styles embedded inline. Useful for pasting in emails and online text inputs that accept HTML.
+🍝 Markdown to spaghettified HTML.
+
+_Spaghettified HTML?_ Yep - that's HTML with all the styles of each element applied inline.
+
+_[But why?](https://media.giphy.com/media/3oz8xMbKLAkRLHYNgI/giphy.gif)_ So you can paste it into emails and other text inputs that accept HTML, where support for external CSS is limited or non-existent.
 
 [![Promotional image show Noodle editor, preview, and output](./promo.png)](https://noodle-editor.netlify.com/)
 
