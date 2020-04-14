@@ -50,7 +50,7 @@ export default {
         'Knock it out of the park...',
         'Blow them away...',
         'Wow them...',
-        'Do, or do not. There is not try...',
+        'Do, or do not. There is no try...',
         'Write something amazing...',
         'Write something awesome...',
         'You got this...',
@@ -59,7 +59,6 @@ export default {
         "Don't let your dreams be dreams...",
         'Yes you can...',
         'Just write...',
-        'A journey of a thousand miles begins with only one step...',
         "If you never try, you'll never know...",
         "You miss 100% of the shots you don't take...",
       ];
