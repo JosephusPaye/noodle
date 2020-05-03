@@ -1,6 +1,6 @@
 {
   "name": "@josephuspaye/noodle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Markdown to spaghettified HTML.",
   "main": "dist/noodle.js",
   "author": "Josephus Paye II",
