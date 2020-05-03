@@ -41,6 +41,7 @@ export default {
 
   props: {
     html: String,
+    spaghettified: String,
   },
 
   data() {

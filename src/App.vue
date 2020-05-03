@@ -7,7 +7,7 @@
     >
       <Editor v-model="input" :errors="errors" />
       <div class="divider"></div>
-      <Output :html="output">
+      <Output :html="output" :spaghettified="output">
         <NoodlePreview
           v-bind="previewAttrs"
           v-on="previewEvents"
@@ -20,7 +20,7 @@
 
 <script>
 import debounce from 'debounce';
-import { Noodle, NoodlePreview } from './lib/dist/noodle';
+import { Noodle, NoodlePreview } from '@josephuspaye/noodle';
 
 import Editor from './components/Editor.vue';
 import Output from './components/Output.vue';

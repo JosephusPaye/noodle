@@ -5,6 +5,10 @@
   "main": "dist/noodle.js",
   "author": "Josephus Paye II",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosephusPaye/noodle.git"
+  },
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c --compact -m"
