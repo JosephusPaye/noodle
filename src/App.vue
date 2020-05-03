@@ -1,15 +1,27 @@
 <template>
-  <div id="app" class="h-screen grid grid-rows-1 grid-cols-2">
-    <Editor v-model="input" :errors="errors" />
-    <div class="divider"></div>
-    <Output :html="html" :spaghettified.sync="spaghettified" />
+  <div id="app">
+    <Noodle
+      class="noodle-app h-screen w-full"
+      :input="input"
+      v-slot="{ output, errors, previewAttrs, previewEvents }"
+    >
+      <Editor v-model="input" :errors="errors" />
+      <div class="divider"></div>
+      <Output :html="output">
+        <NoodlePreview
+          v-bind="previewAttrs"
+          v-on="previewEvents"
+          slot="preview"
+        />
+      </Output>
+    </Noodle>
   </div>
 </template>
 
 <script>
 import debounce from 'debounce';
+import { Noodle, NoodlePreview } from './lib/dist/noodle';
 
-import { compile } from './compiler';
 import Editor from './components/Editor.vue';
 import Output from './components/Output.vue';
 
@@ -26,56 +38,25 @@ const persistInput = debounce(input => {
   }
 }, 250);
 
-const compileInput = debounce((input, callback) => {
-  try {
-    const html = compile(input);
-    callback({ valid: true, html });
-  } catch (err) {
-    callback({ valid: false, errors: [err] });
-  }
-}, 250);
-
 export default {
   name: 'App',
 
   components: {
     Editor,
     Output,
+    Noodle,
+    NoodlePreview,
   },
 
   data() {
     return {
       input: getDefaultInput(),
-      html: '',
-      spaghettified: '',
-      errors: [],
     };
   },
 
   watch: {
     input(input) {
-      this.compileMarkdown();
       persistInput(input);
-    },
-  },
-
-  mounted() {
-    this.compileMarkdown();
-  },
-
-  methods: {
-    compileMarkdown() {
-      compileInput(this.input, this.onCompile);
-    },
-
-    onCompile({ html, valid, errors }) {
-      if (valid) {
-        this.html = html;
-        this.errors = [];
-      } else {
-        console.error(errors);
-        this.errors = errors;
-      }
     },
   },
 };
@@ -89,7 +70,8 @@ body {
   @apply text-base;
 }
 
-#app {
+.noodle-app {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 4px 1fr;
 

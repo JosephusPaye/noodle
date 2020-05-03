@@ -6,12 +6,5 @@ module.exports = {
       .use('raw-loader')
       .loader('raw-loader')
       .end();
-
-    config.module
-      .rule('raw-css')
-      .test(/\.rawcss$/)
-      .use('raw-loader')
-      .loader('raw-loader')
-      .end();
   },
 };

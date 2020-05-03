@@ -844,6 +844,10 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@josephuspaye/noodle@link:lib":
+  version "0.0.0"
+  uid ""
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

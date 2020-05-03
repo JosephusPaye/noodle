@@ -1,0 +1,37 @@
+{
+  "name": "@josephuspaye/noodle",
+  "version": "0.1.0",
+  "description": "Markdown to spaghettified HTML.",
+  "main": "dist/noodle.js",
+  "author": "Josephus Paye II",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c --compact -m"
+  },
+  "dependencies": {
+    "debounce": "^1.2.0",
+    "highlight.js": "^9.18.1",
+    "markdown-it": "^10.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-json": "^4.0.3",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "rollup": "^2.7.6",
+    "rollup-plugin-string": "^3.0.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-vue": "^5.1.5"
+  },
+  "files": [
+    "dist",
+    "styles",
+    "compiler.js",
+    "css.js",
+    "index.js",
+    "Noodle.vue",
+    "NoodlePreview.vue",
+    "README.md",
+    "yarn.lock"
+  ]
+}

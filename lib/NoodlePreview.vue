@@ -1,17 +1,25 @@
 <template>
-  <div class="noodle-shadow-root"></div>
+  <div
+    class="noodle-shadow-root"
+    :style="{ all: 'initial' }"
+    v-show="!hidden"
+  ></div>
 </template>
 
 <script>
-import css from '../assets/markdown.rawcss';
-import highlightCss from '../assets/atom-one-light.hljs.rawcss';
-import { spaghettify } from '../compiler';
+import css from './styles/markdown.css';
+import highlightCss from './styles/atom-one-light.hljs.css';
+import { spaghettify } from './compiler';
 
 export default {
-  name: 'OutputPreview',
+  name: 'NoodlePreview',
 
   props: {
     html: String,
+    hidden: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   mounted() {
@@ -91,9 +99,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.noodle-shadow-root {
-  all: initial;
-}
-</style>
