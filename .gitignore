@@ -2,6 +2,7 @@
 node_modules
 /dist
 /lib/dist
+/extension/dist
 _del
 
 # local env files
