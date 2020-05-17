@@ -30,3 +30,17 @@ The extension will be published to the Chrome Webstore soon. For now, it can be 
   ![Screenshot of Blackboard editor showing Noodle Editor button](./editor-preview.png)
 
 - For a quick reference, click the help icon at the top right of the toolbar for a Markdown cheatsheet.
+
+## What's next
+
+- Auto commit (to Blackboard editor) and auto save (to local storage, scoped to current page URL) on changes
+- Preserve codeblock language when round-tripping from Markdown to HTML to Markdown
+- Support syntax highlighting more languages, add KaTeX for maths
+- Add a basic toolbar to help with writing Markdown
+- Watch the Blackboard submit button and prompt for a commit if there are any uncommitted editors
+- Refactor and get rid of development logs when building for production
+- Publish to the webstore for Chrome and Firefox
+- Add settings with the following options:
+  - don't override font family and font size in the Noodle generated HTML
+  - automatically switch to the Noodle editor on page load
+- Support other sites
