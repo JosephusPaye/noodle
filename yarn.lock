@@ -844,10 +844,10 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
-"@josephuspaye/noodle@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@josephuspaye/noodle/-/noodle-0.1.1.tgz#5e95c89bf7dc267458f75ec6bd375cf17b7e6cca"
-  integrity sha512-mtCcBm/Ymlu4sukne/XSiL9QKm7DWVgp/kh+qCnfcwwn7jon+f2M7nGRcIfJBzq7Cnzr/HjFP3Uqszzr1ht6zQ==
+"@josephuspaye/noodle@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@josephuspaye/noodle/-/noodle-0.1.2.tgz#26c3b8bd0a24a2767a5dd072a02e79097c11e9b4"
+  integrity sha512-EIsjHNYmSmqwlymVs7SSA3QgCNU1tMUlN9yzN6Hhib24nHC7M1MWvsCxqBYnB1hiY6JwEf/klfAH8NYlGIn+gA==
   dependencies:
     debounce "^1.2.0"
     highlight.js "^9.18.1"
