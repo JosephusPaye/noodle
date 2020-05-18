@@ -11,9 +11,9 @@
     "@josephuspaye/noodle": "^0.1.2",
     "clipboard": "^2.0.6",
     "core-js": "^3.6.4",
-    "debounce": "^1.2.0",
     "emojicon": "^0.1.1",
     "focus-visible": "^5.0.2",
+    "lodash.debounce": "^4.0.8",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11"
   },
