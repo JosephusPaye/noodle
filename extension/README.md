@@ -1,6 +1,6 @@
 # Noodle the extension
 
-Noodle the extension uses a browser extension to integrate the Noodle editor directly into a webpage, replacing a rich-text editor with the Markdown editor.
+Noodle the extension uses a browser extension to integrate the Noodle editor directly into a webpage, replacing another rich-text editor with Noodle's Markdown editor.
 
 For now, it's integrated with [Blackboard Learn](https://uonline.newcastle.edu.au/) version 3800.9.0, the one used at the [University of Newcastle](https://newcastle.edu.au).
 
@@ -15,7 +15,7 @@ The extension will be published to the Chrome Webstore soon. For now, it can be 
 - Extract the zip into a known location
 - Go to the **Extensions** page in Chrome and enable **Developer mode**
 - Click **Load unpacked** and select the extracted zip folder
-- Chrome will install the extension, and will show a message each time the browser is restarted that you have **Developer mode** extension. Simply ignore.
+- Chrome will install the extension, and will show a message each time the browser is restarted that you have a **Developer mode** extension enabled. Simply ignore.
 
 ## Usage
 
@@ -25,21 +25,21 @@ The extension will be published to the Chrome Webstore soon. For now, it can be 
 - A new **🍜 Noodle Editor** button will be added to the Blackboard editor toolbar. Click that to activate the editor.
   ![Screenshot of Blackboard editor showing Noodle Editor button](./editor-button.png)
 
-- Edit and preview your content in Markdown and click **Done** when done, or **Discard** to discard any changes.
-  ![Screenshot of Blackboard editor showing Noodle Editor button](./editor-write.png)
-  ![Screenshot of Blackboard editor showing Noodle Editor button](./editor-preview.png)
+- Edit and preview your content in Markdown and click **Done** to confirm changes, or **Discard** to discard changes.
+  ![Screenshot of Noodle Editor write section](./editor-write.png)
+  ![Screenshot of Noodle Editor preview section](./editor-preview.png)
 
-- For a quick reference, click the help icon at the top right of the toolbar for a Markdown cheatsheet.
+- For a quick reference, click the help icon at the top right of the editor for a Markdown cheatsheet.
 
 ## What's next
 
-- Auto commit (to Blackboard editor) and auto save (to local storage, scoped to current page URL) on changes
+- Auto commit (to Blackboard editor) and auto save (to local storage, scoped to current page URL) on editor changes
 - Preserve codeblock language when round-tripping from Markdown to HTML to Markdown
 - Support syntax highlighting more languages, add KaTeX for maths
-- Add a basic toolbar to help with writing Markdown
+- Add a basic formatting toolbar to help with writing Markdown
 - Watch the Blackboard submit button and prompt for a commit if there are any uncommitted editors
-- Refactor and get rid of development logs when building for production
-- Publish to the webstore for Chrome and Firefox
+- Refactor the content script and get rid of development logs when building for production
+- Publish to the webstores for Chrome and Firefox
 - Add settings with the following options:
   - don't override font family and font size in the Noodle generated HTML
   - automatically switch to the Noodle editor on page load
