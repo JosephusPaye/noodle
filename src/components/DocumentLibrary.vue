@@ -1,7 +1,7 @@
 <template>
   <div class="flex mb-2 bg-gray-800 h-full items-start">
     <div
-      class="p-3 pr-0 w-32 inline-flex items-center cursor-default text-gray-400"
+      class="p-3 pr-0 w-32 inline-flex items-center cursor-default text-gray-400 flex-shrink-0"
     >
       Library
     </div>
