@@ -91,9 +91,24 @@ export default {
 
   mounted() {
     this.updatePageTitle();
+    document.addEventListener('keydown', this.onKeyDown);
+  },
+
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.onKeyDown);
   },
 
   methods: {
+    onKeyDown(e) {
+      if (!e.ctrlKey || e.key !== 's') {
+        return;
+      }
+
+      e.preventDefault();
+
+      this.saveDocument();
+    },
+
     updatePageTitle(title = this.doc.title) {
       document.title = `${title} ${this.doc.saved ? '' : '*'} – Noodle`;
     },

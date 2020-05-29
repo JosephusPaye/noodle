@@ -1,13 +1,15 @@
 <template>
   <div class="flex mb-2 bg-gray-800 h-full items-start">
     <div
-      class="p-3 pr-0 w-24 inline-flex items-center cursor-default text-gray-400"
+      class="p-3 pr-0 w-32 inline-flex items-center cursor-default text-gray-400"
     >
       Library
     </div>
-    <div class="ml-2 p-3 pl-0 flex-grow flex overflow-y-auto h-full">
+    <div
+      class="ml-2 p-3 pl-0 flex-grow flex overflow-y-auto h-full flex-wrap content-start"
+    >
       <button
-        class="px-3 h-8 inline-flex flex-shrink-0 items-center justify-center capitalize cursor-pointer mr-1"
+        class="px-3 h-8 inline-flex flex-shrink-0 items-center justify-center capitalize cursor-pointer mr-1 mb-1"
         :class="
           currentDocument === doc ? 'bg-blue-400' : 'bg-gray-700 text-gray-300'
         "
