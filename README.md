@@ -4,7 +4,7 @@
 
 _Spaghettified HTML?_ Yep - that's HTML with all the styles of each element applied inline.
 
-_[But why?](https://media.giphy.com/media/3oz8xMbKLAkRLHYNgI/giphy.gif)_ So you can paste it into emails and other text inputs that accept HTML, where support for external CSS is limited or non-existent.
+_[But why?](https://media1.giphy.com/media/s239QJIh56sRW/giphy.gif?cid=ecf05e47ltybwrx8clmo49ovcdkzl1f9tbbjbk9bar1ww1jq&rid=giphy.gif)_ So you can paste it into emails and other text inputs that accept HTML, where support for external CSS is limited or non-existent.
 
 [![Promotional image show Noodle editor, preview, and output](./promo.png)](https://noodle-editor.netlify.com/)
 
