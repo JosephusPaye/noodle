@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "debounce": "^1.2.0",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.1.2",
     "markdown-it": "^10.0.0"
   },
   "devDependencies": {
