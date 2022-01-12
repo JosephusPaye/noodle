@@ -16,7 +16,7 @@
   "dependencies": {
     "debounce": "^1.2.0",
     "highlight.js": "^10.1.2",
-    "markdown-it": "^10.0.0"
+    "markdown-it": "^12.3.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
